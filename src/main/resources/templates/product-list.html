@@ -46,7 +46,7 @@
                 <td sec:authorize="hasAuthority('USER') || isAnonymous()">
                     <a type="button" th:href="@{'/product/' + ${product.id} }" class="btn btn-warning">Просмотреть</a>
                 </td>
-                <td sec:authorize="hasAuthority('USER')">
+                <td sec:authorize="isAnonymous()">
                     <a type="button" th:href="@{'/cart/add/' + ${product.id}}" class="btn btn-danger">Добавить</a>
                 </td>
             </tr>

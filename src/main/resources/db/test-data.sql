@@ -13,6 +13,12 @@ insert into user_authority (user_id, authority_id)
 values (1, 1),
        (2, 2);
 
+insert into PRODUCT (title, cost, MANUFACTURE_DATE)
+values ('Cloves - Whole', 321.7, '5/2/2021');
+insert into PRODUCT (title, cost, MANUFACTURE_DATE)
+values ('Apple - Northern Spy', 3483.35, '6/17/2021');
+insert into PRODUCT (title, cost, MANUFACTURE_DATE)
+values ('Bacardi Breezer - Strawberry', 383.81, '7/31/2021');
 
 
 -- insert into MANUFACTURER (name) values ('Oxford Industries, Inc.');
