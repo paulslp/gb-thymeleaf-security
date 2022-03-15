@@ -14,6 +14,7 @@ import ru.gb.gbthymeleafwinter.entity.enums.Status;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -88,5 +89,10 @@ public class ProductService {
         System.out.println(productDao.count());
         // какая-то логика
         return productDao.count();
+    }
+
+    @Transactional(readOnly = true)
+    Set<Product> findAllByIdIn(Set<Long> ids) {
+        return productDao.findAllByIdIn(ids);
     }
 }

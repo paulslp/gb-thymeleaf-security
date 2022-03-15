@@ -7,6 +7,7 @@ import ru.gb.gbthymeleafwinter.entity.Product;
 import ru.gb.gbthymeleafwinter.entity.enums.Status;
 
 import java.util.List;
+import java.util.Set;
 
 public interface ProductDao extends JpaRepository<Product, Long> {
     Product findByTitle(String title);
@@ -18,4 +19,6 @@ public interface ProductDao extends JpaRepository<Product, Long> {
     List<Product> findAllByStatus(Status status, Pageable pageable);
 
     List<Product> findAllByStatus(Status status, Sort sort);
+
+    Set<Product> findAllByIdIn(Set<Long> ids);
 }
